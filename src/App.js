@@ -1,10 +1,13 @@
+import { useState } from "react";
 import "./App.css";
+import { C1 } from "./Comp1";
 
 function App() {
+  const [state, setState] = useState(true);
   return (
-    <div>
-      <h2 style={{ textAlign: "center" }}>React Project</h2>
-    </div>
+    <>
+      <C1 title={state} setter={setState} />
+    </>
   );
 }
 
